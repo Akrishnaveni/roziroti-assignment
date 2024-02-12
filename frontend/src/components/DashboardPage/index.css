@@ -1,0 +1,29 @@
+.dashboard-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.transaction-list {
+  margin-bottom: 20px;
+}
+
+.transaction-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.transaction-list li {
+  margin-bottom: 5px;
+}
+
+.balance {
+  border-top: 2px solid #ccc;
+  padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 10px;
+  }
+}
