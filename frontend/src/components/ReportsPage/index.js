@@ -9,6 +9,13 @@ const ReportsPage = () => {
     // Fetch monthly income vs. expenses report data
     // Example:
     // fetchData().then(data => setReportData(data));
+    const data = [
+      { month: "february", income: 8000, expenses: 4200 },
+      { month: "june", income: 7000, expenses: 8200 },
+      { month: "August", income: 6800, expenses: 6200 },
+    ];
+
+    setReportData(data);
   }, []);
 
   return (

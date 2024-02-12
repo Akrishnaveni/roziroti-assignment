@@ -4,9 +4,14 @@ import "./index.css"; // Import CSS file
 const TransactionFormPage = () => {
   const [amount, setAmount] = useState("");
   const [description, setDescription] = useState("");
+  const [category, setCategory] = useState("");
 
-  const handleSubmit = () => {
-    // Implement form submission functionality
+  const handleSubmit = (amount, description) => {
+    event.preventDefault();
+
+    setAmount("");
+    setDescription("");
+    setCategory("");
   };
 
   return (
@@ -20,6 +25,7 @@ const TransactionFormPage = () => {
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             className="form-control"
+            required
           />
         </div>
         <div className="form-group">
@@ -29,7 +35,20 @@ const TransactionFormPage = () => {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             className="form-control"
+            required
           />
+        </div>
+        <div className="form-group">
+          <select
+            placeholder="choose category"
+            name="category"
+            value={category}
+            className="form-control"
+            onChange={(e) => setCategory(e.target.value)}
+          >
+            <option value="income">Income</option>
+            <option value="expenses">Expenses</option>
+          </select>
         </div>
         <button type="submit" className="btn btn-primary">
           Submit
